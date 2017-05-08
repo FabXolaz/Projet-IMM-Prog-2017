@@ -4,7 +4,6 @@
 	<title>boutique</title>
 	<meta charset="utf-8">
 </head>
-
 <body onload="init()">
 	
 	<div id="ghost_fond"></div>
@@ -87,18 +86,7 @@
 				</form><label id="lblResIns"></label>
 			</div>
 			
-			<div id="cart_window" class="over_menu">
-				<!--<div id="Cart_name">Cart</div>
-				<div class="item">
-					<span id="remove_cart">X</span>
-					<img class="item_image" id="item1" src="img/test">
-				</div>-->
-
-				
-
-			</div>
-
-			<!--<div id="cart.checkout">
+			<!--<div id="achat">
 				<form id="achtForm" id="achtForm" method="post" action="#">
 					<table>
 						<caption>La caisse</caption>
@@ -127,7 +115,7 @@
 	<div id="nav_ut">
 		
 		<div><span id="btn_connect" class="scroll">Connexion</span></div>
-		<div id="achat"><label id="num_achat">0</label><img id="icon_cart" src="img/icon_cart_w.png"></div>
+		<a href="cart.html"><div id="achat"><label id="num_achat">0</label><img id="icon_cart" src="img/icon_cart_w.png"></div></a>
 
 	</div>
 
@@ -140,17 +128,17 @@
 	<div id="container">
 		<div id="center">
 			<a href="#CP"><div id="ps4" class="console">
-				
+				<img class="imgConsole"src="img/console_ps4.png">
 			</div></a>
 
 			<a href="#CX"><div id="xbox" class="console">
-				
+				<img class="imgConsole"src="img/console_xbone.png">
 			</div></a>
 		</div>
 		<div class="nofloat"></div>
 		
 		<div id="show_off">
-			<h1 id="CX">Xbox</h1>
+			<h1 id="CX">Xbox One</h1>
 
 			<!--Action_Xbox-->
 
@@ -159,18 +147,21 @@
 				<div id="btn1" class="btn" class="scroll" onclick="return btn_info_jeux_xbox_Action(Current_Action)"></div>
 
 				<div class="info_game">
+				<h2>Jeux d'action</h2><br>
 					<img id="slider1" class="presentation" src="img/xbone/xbone_act1.jpg">
 
-					<label id="Xbox_Action_Name"></label>
-					<label id="Xbox_Action_Price"></label>
+					<p><strong><label id="Xbox_Action_Name"></label></strong></p><br>
+					<br>
+					<p><label id="Xbox_Action_Price"></label> $</p>
 					
 				</div>
 				<div class="button_slider">
 					<input type="button" id="precXBONE1" value="<" onclick="return Xbox_Action_SliderBackward()">
+					<input type="button" id="buy_it" value="Acheter">
 					<input type="button" id="suivXBONE1" value=">" onclick="return Xbox_Action_SliderForward()">
 					
 				</div>
-				<input type="button" id="buy_it" value="buy">
+				
 			</div>
 
 			<!--FPS_Xbox-->
@@ -180,37 +171,43 @@
 				<div id="btn2" class="btn" class="scroll" onclick="return btn_info_jeux_xbox_FPS(Current_FPS)"></div>
 
 				<div class="info_game">
+					<h2>Jeux de tire</h2><br>
 					<img id="slider2" class="presentation" src="img/xbone/xbone_fps1.jpg">
 
-					<label id="Xbox_FPS_Name"></label>
-					<label id="Xbox_FPS_Price"></label>
+					<p><strong><label id="Xbox_FPS_Name"></label></strong></p><br>
+					<br>
+					<p><label id="Xbox_FPS_Price"></label> $</p>
 				
 				</div>
 				<div class="button_slider">
 					<input type="button" id="precXBONE1" value="<" onclick="return Xbox_FPS_SliderBackward()">
+					<input type="button" id="buy_it" value="Acheter">
 					<input type="button" id="suivXBONE1" value=">" onclick="return Xbox_FPS_SliderForward()">
 				</div>
-				<input type="button" id="buy_it" value="buy">
+				
 			</div>
 
 			<!--Survival_Xbox-->
 
 			<div class="game_show">
-
+				
 				<div id="btn3" class="btn" class="scroll" onclick="return btn_info_jeux_xbox_svh(Current_svh)"></div>
 
 				<div class="info_game">
+				<h2>Jeux d'horreur</h2><br>
 					<img id="slider3" class="presentation" src="img/xbone/xbone_svh1.jpg">
 
-					<label id="Xbox_svh_Name"></label>
-					<label id="Xbox_svh_Price"></label>
+					<p><strong><label id="Xbox_svh_Name"></label></strong></p><br>
+					<br>
+					<p><label id="Xbox_svh_Price"></label> $</p>
 				
 				</div>
 				<div class="button_slider">
 					<input type="button" id="precXBONE1" value="<" onclick="return Xbox_svh_SliderBackward()">
+					<input type="button" id="buy_it" value="Acheter">
 					<input type="button" id="suivXBONE1" value=">" onclick="return Xbox_svh_SliderForward()">
 				</div>
-				<input type="button" id="buy_it" value="buy">
+				
 			</div>
 
 			<div class="nofloat"></div>
@@ -228,17 +225,20 @@
 				<div id="btn4" class="btn" class="scroll" onclick="return btn_info_jeux_ps4_act(Current_act)"></div>
 
 				<div class="info_game">
+					<h2>Jeux d'action</h2><br>
 					<img id="slider4" class="presentation" src="img/ps4/ps4_act1.jpg">
 
-					<label id="ps4_act_Name"></label>
-					<label id="ps4_act_Price"></label>
+					<p><strong><label id="ps4_act_Name"></label></strong></p><br>
+					<br>
+					<p><label id="ps4_act_Price"></label> $</p>
 				
 				</div>
 				<div class="button_slider">
 					<input type="button" id="precps4" value="<" onclick="return ps4_act_SliderBackward()">
+					<input type="button" id="buy_it" value="Acheter">
 					<input type="button" id="suivps4" value=">" onclick="return ps4_act_SliderForward()">
 				</div>
-				<input type="button" id="buy_it" value="buy">
+				
 			</div>
 
 			<!--Infiltration_PS4-->
@@ -248,17 +248,20 @@
 				<div id="btn5" class="btn" class="scroll" onclick="return btn_info_jeux_ps4_inf(Current_inf)"></div>
 
 				<div class="info_game">
+					<h2>Jeux d'infiltration</h2><br>
 					<img id="slider5" class="presentation" src="img/ps4/ps4_inf1.jpg">
 
-					<label id="ps4_inf_Name"></label>
-					<label id="ps4_inf_Price"></label>
+					<p><strong><label id="ps4_inf_Name"></label></strong></p><br>
+					<br>
+					<p><label id="ps4_inf_Price"></label> $</p>
 				
 				</div>
 				<div class="button_slider">
 					<input type="button" id="precps4" value="<" onclick="return ps4_inf_SliderBackward()">
+					<input type="button" id="buy_it" value="Acheter">
 					<input type="button" id="suivps4" value=">" onclick="return ps4_inf_SliderForward()">
 				</div>
-				<input type="button" id="buy_it" value="buy">
+				
 			</div>
 
 			<!--RPG_PS4-->
@@ -268,17 +271,20 @@
 				<div id="btn6" class="btn" class="scroll" onclick="return btn_info_jeux_ps4_rpg(Current_rpg)"></div>
 
 				<div class="info_game">
+					<h2>Jeux de rôle</h2><br>
 					<img id="slider6" class="presentation" src="img/ps4/ps4_rpg1.jpg">
 
-					<label id="ps4_rpg_Name">Overwatch</label>
-					<label id="ps4_rpg_Price">49,99</label>
+					<p><strong><label id="ps4_rpg_Name"></label></strong></p><br>
+					<br>
+					<p><label id="ps4_rpg_Price"></label> $</p>
 				
 				</div>
 				<div class="button_slider">
 					<input type="button" id="precps4" value="<" onclick="return ps4_rpg_SliderBackward()">
+					<input type="button" id="buy_it" value="Acheter">
 					<input type="button" id="suivps4" value=">" onclick="return ps4_rpg_SliderForward()">
 				</div>
-				<input type="button" id="buy_it" value="buy">
+				
 			</div>
 
 			<div class="nofloat"></div>
@@ -384,8 +390,6 @@ var TabJeuxps4_rpg = new Array(3);
 TabJeuxps4_rpg[0]= new Jeux ("RPG","Persona5", "Atlus", "M", 79.99, "ps4_rpg1");
 TabJeuxps4_rpg[1]= new Jeux ("RPG","The Witcher III: Wild Hunt ", "WB Games", "M", 29.99, "ps4_rpg2");
 TabJeuxps4_rpg[2]= new Jeux ("RPG","Mass Effect: Andromeda", "EA Electronic Arts", "M", 79.99, "ps4_rpg3");
-
-var TabCart = new Array ();
 
 function Jeux( Type, Nom, Editeur, Rating, Prix, Img )
 {
@@ -897,10 +901,8 @@ function getEl(El)
 	$('div#ghost_fond').css("display","none");
 	$('div#ghost').css("display","none");
 	$('div#ghost_exit').css("display","none");
-	$('div#connection').css("display","none");
-	$('div#inscription').css("display","none");
-	$('div#cart_window').css("display","none");
-	$('div#cart.checkout').css("display","none");
+	$('div#connection').css("display","none")
+	$('div#inscription').css("display","none")
 
 
 });
@@ -974,14 +976,7 @@ $(function() {
   });
 });
 
-$(function() {
-  $('#achat').click(function() {
-  	$('#ghost_fond').fadeIn("slow");
-  	$('#cart_window').fadeIn("slow");
-  	$('#ghost_exit').fadeIn("slow");
 
-  });
-});
 
 $(function() {
   $('#create_account').click(function() {
@@ -1007,7 +1002,6 @@ $(function() {
   	$('#connection').fadeOut("slow");
   	$('#inscription').fadeOut("slow");
   	$('#ghost_exit').fadeOut("slow");
-  	$('#cart_window').fadeOut("slow");
 	$('html, body').css({
 	    overflow: 'auto',
 	    height: 'auto'
