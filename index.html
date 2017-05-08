@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>boutique</title>
+	<title>KO Games - Les prix à battre sont ici!</title>
 	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="img/icon.png">
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Open+Sans" rel="stylesheet">
 </head>
 <body onload="init()">
 	
 	<div id="ghost_fond"></div>
 			<div id="ghost">
-			
-			
-				<div class="info_section" id="img_game"><img id="img_cover" src="" width="100px"></div>
-
+				<div class="title2">
+					<h2>Informations sur le jeu</h2>
+				</div>
+					<div class="info_section" id="img_game"><img id="img_cover" src="" width="100px"></div>
+				
 				<div class="info_section" id="text_game">
-						Type: <label id="type"></label><br>
-						Nom: <label id="nom"></label><br>
-						Editeur: <label id="editeur"></label><br>
-						Rating: <label id="rating"></label><br>
-						Prix: <label id="prix"></label><br>
+					<table>
+						<tr><th>Type: </th><th><label id="type"></label></th></tr>
+						<tr><th>Nom: </th><th><label id="nom"></label></th></tr>
+						<tr><th>Editeur: </th><th><label id="editeur"></label></th></tr>
+						<tr><th>Rating: </th><th><label id="rating"></label></th></tr>
+						<tr><th>Prix: </th><th><label id="prix"></label></th></tr>
+					</table>
 				</div>
 				
 			</div>
@@ -86,18 +92,7 @@
 				</form><label id="lblResIns"></label>
 			</div>
 			
-			<div id="cart_window" class="over_menu">
-				<!--<div id="Cart_name">Cart</div>
-				<div class="item">
-					<span id="remove_cart">X</span>
-					<img class="item_image" id="item1" src="img/test">
-				</div>-->
-
-				
-
-			</div>
-
-			<!--<div id="cart.checkout">
+			<!--<div id="achat">
 				<form id="achtForm" id="achtForm" method="post" action="#">
 					<table>
 						<caption>La caisse</caption>
@@ -126,7 +121,7 @@
 	<div id="nav_ut">
 		
 		<div><span id="btn_connect" class="scroll">Connexion</span></div>
-		<div id="achat"><label id="num_achat">0</label><img id="icon_cart" src="img/icon_cart_w.png"></div>
+		<a href="cart.html"><div id="achat"><label id="num_achat">0</label><img id="icon_cart" src="img/icon_cart_w.png"></div></a>
 
 	</div>
 
@@ -149,157 +144,149 @@
 		<div class="nofloat"></div>
 		
 		<div id="show_off">
-			<h1 id="CX">Xbox One</h1>
-
+			<div class="title1" id="titleXbox">
+				<h1>Xbox One</h1>
+			</div>
 			<!--Action_Xbox-->
 
 			<div class="game_show">
-
-				<div id="btn1" class="btn" class="scroll" onclick="return btn_info_jeux_xbox_Action(Current_Action)"></div>
-
+				<div class="title2">
+					<h2>Jeux d'action</h2>
+					<div id="btn1" class="btn" class="scroll" onclick="return btn_info_jeux_xbox_Action(Current_Action)"></div>
+				</div>
+				
 				<div class="info_game">
-				<h2>Jeux d'action</h2><br>
 					<img id="slider1" class="presentation" src="img/xbone/xbone_act1.jpg">
-
 					<p><strong><label id="Xbox_Action_Name"></label></strong></p><br>
 					<br>
 					<p><label id="Xbox_Action_Price"></label> $</p>
 					
 				</div>
-				<div class="button_slider">
-					<input type="button" id="precXBONE1" value="<" onclick="return Xbox_Action_SliderBackward()">
-					<input type="button" id="buy_it" value="Acheter">
-					<input type="button" id="suivXBONE1" value=">" onclick="return Xbox_Action_SliderForward()">
-					
-				</div>
 				
+				<div class="button_slider">
+					<input type="button" class="btnPrec" id="precXBONE1" onclick="return Xbox_Action_SliderBackward()">
+					<input type="button" id="buy_it">
+					<input type="button" class="btnSuiv" id="suivXBONE1" onclick="return Xbox_Action_SliderForward()">
+				</div>
 			</div>
 
 			<!--FPS_Xbox-->
 
 			<div class="game_show">
-
-				<div id="btn2" class="btn" class="scroll" onclick="return btn_info_jeux_xbox_FPS(Current_FPS)"></div>
-
+				<div class="title2">
+					<h2>Jeux de tire</h2>
+					<div id="btn2" class="btn" class="scroll" onclick="return btn_info_jeux_xbox_FPS(Current_FPS)"></div>
+				</div>
+				
 				<div class="info_game">
-					<h2>Jeux de tire</h2><br>
 					<img id="slider2" class="presentation" src="img/xbone/xbone_fps1.jpg">
-
 					<p><strong><label id="Xbox_FPS_Name"></label></strong></p><br>
 					<br>
 					<p><label id="Xbox_FPS_Price"></label> $</p>
-				
 				</div>
+				
 				<div class="button_slider">
-					<input type="button" id="precXBONE1" value="<" onclick="return Xbox_FPS_SliderBackward()">
-					<input type="button" id="buy_it" value="Acheter">
-					<input type="button" id="suivXBONE1" value=">" onclick="return Xbox_FPS_SliderForward()">
+					<input type="button" class="btnPrec" id="precXBONE1" onclick="return Xbox_FPS_SliderBackward()">
+					<input type="button" id="buy_it">
+					<input type="button" class="btnSuiv" id="suivXBONE1" onclick="return Xbox_FPS_SliderForward()">
 				</div>
-				
 			</div>
 
 			<!--Survival_Xbox-->
 
 			<div class="game_show">
+				<div class="title2">
+					<h2>Jeux d'horreur</h2>
+					<div id="btn3" class="btn" class="scroll" onclick="return btn_info_jeux_xbox_svh(Current_svh)"></div>
+				</div>
 				
-				<div id="btn3" class="btn" class="scroll" onclick="return btn_info_jeux_xbox_svh(Current_svh)"></div>
-
 				<div class="info_game">
-				<h2>Jeux d'horreur</h2><br>
 					<img id="slider3" class="presentation" src="img/xbone/xbone_svh1.jpg">
-
 					<p><strong><label id="Xbox_svh_Name"></label></strong></p><br>
 					<br>
 					<p><label id="Xbox_svh_Price"></label> $</p>
-				
 				</div>
+				
 				<div class="button_slider">
-					<input type="button" id="precXBONE1" value="<" onclick="return Xbox_svh_SliderBackward()">
-					<input type="button" id="buy_it" value="Acheter">
-					<input type="button" id="suivXBONE1" value=">" onclick="return Xbox_svh_SliderForward()">
+					<input type="button" class="btnPrec" id="precXBONE1" onclick="return Xbox_svh_SliderBackward()">
+					<input type="button" id="buy_it">
+					<input type="button" class="btnSuiv" id="suivXBONE1" onclick="return Xbox_svh_SliderForward()">
 				</div>
-				
 			</div>
 
-			<div class="nofloat"></div>
+		<div class="nofloat"></div>
 
-			
-		
 		<div id="show_off">
-
-			<h1 id="CP">PlayStation 4</h1>
-
+			<div class="title1" id="titlePs4">
+				<h1>PlayStation 4</h1>
+			</div>
 			<!--Action_PS4-->
 
 			<div class="game_show">
-
-				<div id="btn4" class="btn" class="scroll" onclick="return btn_info_jeux_ps4_act(Current_act)"></div>
-
+				<div class="title2">
+					<h2>Jeux d'action</h2>
+					<div id="btn4" class="btn" class="scroll" onclick="return btn_info_jeux_ps4_act(Current_act)"></div>
+				</div>
+				
 				<div class="info_game">
-					<h2>Jeux d'action</h2><br>
 					<img id="slider4" class="presentation" src="img/ps4/ps4_act1.jpg">
-
 					<p><strong><label id="ps4_act_Name"></label></strong></p><br>
 					<br>
 					<p><label id="ps4_act_Price"></label> $</p>
-				
 				</div>
+				
 				<div class="button_slider">
-					<input type="button" id="precps4" value="<" onclick="return ps4_act_SliderBackward()">
-					<input type="button" id="buy_it" value="Acheter">
-					<input type="button" id="suivps4" value=">" onclick="return ps4_act_SliderForward()">
+					<input type="button" class="btnPrec" id="precps4" onclick="return ps4_act_SliderBackward()">
+					<input type="button" id="buy_it">
+					<input type="button" class="btnSuiv" id="suivps4" onclick="return ps4_act_SliderForward()">
 				</div>
-				
 			</div>
 
 			<!--Infiltration_PS4-->
 
 			<div class="game_show">
-
-				<div id="btn5" class="btn" class="scroll" onclick="return btn_info_jeux_ps4_inf(Current_inf)"></div>
-
+				<div class="title2">
+					<h2>Jeux d'infiltration</h2>
+					<div id="btn5" class="btn" class="scroll" onclick="return btn_info_jeux_ps4_inf(Current_inf)"></div>
+				</div>
+				
 				<div class="info_game">
-					<h2>Jeux d'infiltration</h2><br>
 					<img id="slider5" class="presentation" src="img/ps4/ps4_inf1.jpg">
-
 					<p><strong><label id="ps4_inf_Name"></label></strong></p><br>
 					<br>
 					<p><label id="ps4_inf_Price"></label> $</p>
-				
 				</div>
+				
 				<div class="button_slider">
-					<input type="button" id="precps4" value="<" onclick="return ps4_inf_SliderBackward()">
-					<input type="button" id="buy_it" value="Acheter">
-					<input type="button" id="suivps4" value=">" onclick="return ps4_inf_SliderForward()">
+					<input type="button" class="btnPrec" id="precps4" onclick="return ps4_inf_SliderBackward()">
+					<input type="button" id="buy_it">
+					<input type="button" class="btnSuiv" id="suivps4" onclick="return ps4_inf_SliderForward()">
 				</div>
-				
 			</div>
 
 			<!--RPG_PS4-->
 
 			<div class="game_show">
-
-				<div id="btn6" class="btn" class="scroll" onclick="return btn_info_jeux_ps4_rpg(Current_rpg)"></div>
-
-				<div class="info_game">
+				<div class="title2">
+					<div id="btn6" class="btn" class="scroll" onclick="return btn_info_jeux_ps4_rpg(Current_rpg)"></div>
 					<h2>Jeux de rôle</h2><br>
+				</div>
+				
+				<div class="info_game">
 					<img id="slider6" class="presentation" src="img/ps4/ps4_rpg1.jpg">
-
 					<p><strong><label id="ps4_rpg_Name"></label></strong></p><br>
 					<br>
 					<p><label id="ps4_rpg_Price"></label> $</p>
-				
 				</div>
+				
 				<div class="button_slider">
-					<input type="button" id="precps4" value="<" onclick="return ps4_rpg_SliderBackward()">
-					<input type="button" id="buy_it" value="Acheter">
-					<input type="button" id="suivps4" value=">" onclick="return ps4_rpg_SliderForward()">
+					<input type="button" class="btnPrec" id="precps4" onclick="return ps4_rpg_SliderBackward()">
+					<input type="button" id="buy_it">
+					<input type="button" class="btnSuiv" id="suivps4" onclick="return ps4_rpg_SliderForward()">
 				</div>
-				
 			</div>
 
 			<div class="nofloat"></div>
-
 
 			<div class="nofloat"></div>
 
@@ -912,10 +899,8 @@ function getEl(El)
 	$('div#ghost_fond').css("display","none");
 	$('div#ghost').css("display","none");
 	$('div#ghost_exit').css("display","none");
-	$('div#connection').css("display","none");
-	$('div#inscription').css("display","none");
-	$('div#cart_window').css("display","none");
-	$('div#cart.checkout').css("display","none");
+	$('div#connection').css("display","none")
+	$('div#inscription').css("display","none")
 
 
 });
@@ -989,14 +974,7 @@ $(function() {
   });
 });
 
-$(function() {
-  $('#achat').click(function() {
-  	$('#ghost_fond').fadeIn("slow");
-  	$('#cart_window').fadeIn("slow");
-  	$('#ghost_exit').fadeIn("slow");
 
-  });
-});
 
 $(function() {
   $('#create_account').click(function() {
@@ -1022,7 +1000,6 @@ $(function() {
   	$('#connection').fadeOut("slow");
   	$('#inscription').fadeOut("slow");
   	$('#ghost_exit').fadeOut("slow");
-  	$('#cart_window').fadeOut("slow");
 	$('html, body').css({
 	    overflow: 'auto',
 	    height: 'auto'
@@ -1030,5 +1007,4 @@ $(function() {
   });
 });
 </script>
-<link rel="stylesheet" type="text/css" href="css/mystyle.css">
 </html>
