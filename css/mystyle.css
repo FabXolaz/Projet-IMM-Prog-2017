@@ -92,7 +92,7 @@
 
 }
 
-/*Global*/
+/*--Global--*/
 *{
 	margin: 0;
 	padding: 0;
@@ -107,11 +107,10 @@ body{
 	width: 100%;
 }
 
-
-/*MAIN*/
+/*--MAIN--*/
 #nav_ut{
 	height: 45px;
-	background-color: #000000;
+	background-color: black;
 }
 
 header{
@@ -132,6 +131,7 @@ header{
 
 #container{
 	background-image: url("../img/stripe.png");
+	background-attachment: fixed;
 	width: 100%;
 	padding-top: 15px;
 }
@@ -143,6 +143,29 @@ header{
 	height: 300px;
 	margin: 0.5%;
 	transition: all .3s;
+}
+
+.title1{
+	width: 100%;
+	height: 150px;
+	color: white;
+	text-align: center;
+	background-image: url("../img/titre1_deco.png");
+	background-repeat: repeat-x;
+}
+#titleXbox{
+	background-color: #00A651;
+}
+#titlePs4{
+	background-color: #0058A6;
+}
+.title2{
+	background-color: black;
+	position: relative;
+	width: 100%;
+	height: 60px;
+	color: white;
+	text-align: center;
 }
 
 #ps4{
@@ -184,7 +207,8 @@ header{
 }
 
 .game_show{
-	min-height: 700px;
+	min-height: 750px;
+	position: realtive;
 	width: 32%;
 	margin: 0.65%;
 	background-color: white;
@@ -198,8 +222,7 @@ header{
 
 .button_slider
 {
-	text-align: center;
-	margin-top: 15px;
+	margin: auto;
 }
 
 #show_off{
@@ -222,7 +245,9 @@ header{
 	height: 30px;
 	width: 30px;
 	background-image: url("../img/btn_zoom.png"); 
-	float: right;
+	position: absolute;
+	top: 0;
+	right: 0;
 	margin: 10px;
 	cursor: pointer;
 	transition: all .3s;
@@ -234,7 +259,7 @@ header{
 }
 
 .info_game{
-	
+	min-height: 500px;
 	margin: auto;
 	text-align: center;
 	width: 250px;
@@ -254,7 +279,7 @@ footer{
 	margin-top: 40px; 
 }
 
-/*TEXT*/
+/*--TEXT--*/
 .info_game p {
 	margin: 5px;
 	display: inline;
@@ -265,13 +290,18 @@ footer{
 	color: white;
 }
 
+/*--TITRES--*/
 h1{
-	font-family: 'Anton', sans-serif;
-    font-size: 4em;
-    font-weight: bolder;
+	font-family: 'Oswald', sans-serif;
+    font-size: 6em;
+}
+h2{
+	font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+	margin-left: 10px;
 }
 
-/*Images*/
+/*--IMAGES--*/
 
 .presentation{
 	margin: auto;
@@ -290,7 +320,7 @@ h1{
 	margin-left: 20px;
 }
 
-/*Links*/
+/*--LIENS--*/
 #btn_connect{
 	font-size: 17px;
     float: right;
@@ -307,15 +337,44 @@ h1{
 }
 
 
-/*table*/
+/*--TABLEAUX--*/
 table{
 	height: 100%;
 	margin: auto;
 	width: 500px;
 }
 
-/*input*/
+/*--INPUTS--*/
 #buy_it
 {
-	margin:10px; 
+	height: 50px;
+	width: 100px;
+	background-image: url("../img/btn_buy.png");
+	transition: all .3s;
+	border: none; 
 }
+#buy_it:hover
+{
+	background-image: url("../img/btn_buy_H.png");
+}
+.btnPrec{
+	height: 50px;
+	width: 50px;
+	background-image: url("../img/btn_prec.png");
+	transition: all .3s;
+	border: none;
+}
+.btnSuiv{
+	height: 50px;
+	width: 50px;
+	background-image: url("../img/btn_suiv.png");
+	transition: all .3s;
+	border: none;
+}
+.btnPrec:hover{
+	background-image: url("../img/btn_prec_H.png");
+}
+.btnSuiv:hover{
+	background-image: url("../img/btn_suiv_H.png");
+}
+
