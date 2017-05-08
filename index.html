@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>boutique</title>
+	<meta charset="utf-8">
+</head>
+<!--This is a test for github-->
+<!--This is a test for github-->
+<!--This is a test for github-->
+<!--This is a test for github-->
+<body onload="init()">
+	
+	<div id="ghost_fond"></div>
+			<div id="ghost">
+			
+			
+				<div class="info_section" id="img_game"><img id="img_cover" src="" width="100px"></div>
+
+				<div class="info_section" id="text_game">
+						Type: <label id="type"></label><br>
+						Nom: <label id="nom"></label><br>
+						Editeur: <label id="editeur"></label><br>
+						Rating: <label id="rating"></label><br>
+						Prix: <label id="prix"></label><br>
+				</div>
+				
+			</div>
+
+		<div class="over_menu" id="connection">
+
+			<form id="conxForm" id="conxForm" method="post" action="#">
+				<table>
+					<caption>Connexion au compte</caption>
+					<tr>
+						<th><label for="form_username">Nom d'utilisateur : </label></th>
+						<td><input type="text" name="inputFormConnect" id="txtusername"></td>
+					</tr>
+					<tr>
+						<th><label for="form_password">Mot de passe : </label></th>
+						<td><input type="password" name="inputFormConnect" id="txtpassword"></td>
+					</tr>
+				</table>
+				<button type="button" onclick="FormConnect()">Tester formulaire</button>
+				<div id="create_account"></div>
+			</form><label id="lblResConn"></label>
+		</div>
+						
+			<div class="over_menu" id="inscription">
+				<form id="inscForm" id="inscForm" method="post" action="#">
+					<table>
+						<caption>Informations personnelles</caption>
+						<tr>
+							<th><label for="form_prenom">Prénom : </label></th>
+							<td><input type="text" name="inputFormInsc" id="txtprenom"></td>
+						</tr>
+						<tr>
+							<th><label for="form_nom">Nom : </label></th>
+							<td><input type="text" name="inputFormInsc" id="txtnom"></td>
+						</tr>
+						<tr>
+							<th><label for="form_telephone">Téléphone : </label></th>
+							<td><input type="text" name="inputFormInsc" id="txttelephone"></td>
+						</tr>
+						<tr>
+							<th><label for="form_adresse">Adresse : </label></th>
+							<td><input type="text" name="inputFormInsc" id="txtadresse"></td>
+						</tr>
+						<tr>
+							<th><label for="form_postal">Code postal : </label></th>
+							<td><input type="text" name="inputFormInsc" id="txtpostal"></td>
+						</tr>
+						<tr>
+							<th><label for="form_courriel">Courriel : </label></th>
+							<td><input type="text" name="inputFormInsc" id="txtcourriel"></td>
+						</tr>
+					</table>
+
+					<table>
+						<caption>Informations du compte</caption>
+						<tr>
+							<th><label for="form_username">Nom d'utilisateur : </label></th>
+							<td><input type="text" name="inputFormInsc" id="txtusername"></td>
+						</tr>
+						<tr>
+							<th><label for="form_password">Mot de passe : </label></th>
+							<td><input type="password" name="inputFormInsc" id="txtpassword"></td>
+						</tr>
+					</table>
+					<button type="button" onclick="FormInscription()">Tester formulaire</button>
+				</form><label id="lblResIns"></label>
+			</div>
+			
+			<div id="cart_window" class="over_menu">
+				<!--<div id="Cart_name">Cart</div>
+				<div class="item">
+					<span id="remove_cart">X</span>
+					<img class="item_image" id="item1" src="img/test">
+				</div>-->
+
+				
+
+			</div>
+
+			<!--<div id="cart.checkout">
+				<form id="achtForm" id="achtForm" method="post" action="#">
+					<table>
+						<caption>La caisse</caption>
+						<tr>
+							<th><label for="form_carte">Carte de crédit : </label></th>
+							<td><input type="radio" id="radCarte" value="visa" id="rad">
+								<img id="visa" alt="Visa" src="img/visa.png">
+								<input type="radio" id="radCarte" value="mastercard" id="rad">
+								<img id="mastercard" alt="Mastercard" src="img/mastercard.png"></td>
+						</tr>
+						<tr>
+							<th><label for="form_NumCredit">Numéro de la carte: </label></th>
+							<td><input type="password" id="txtNumCredit"></td>
+						</tr>
+					</table>
+					
+				</form>
+			</div>-->
+
+		<div id="ghost_exit"></div>
+
+<!--Page-->
+
+<div id="main">
+
+	<div id="nav_ut">
+		
+		<div><span id="btn_connect" class="scroll">Connexion</span></div>
+		<div id="achat"><label id="num_achat">0</label><img id="icon_cart" src="img/icon_cart_w.png"></div>
+
+	</div>
+
+	<header>
+	<div id="logo">
+	
+	</div>
+	</header>
+	
+	<div id="container">
+		<div id="center">
+			<a href="#CP"><div id="ps4" class="console">
+				
+			</div></a>
+
+			<a href="#CX"><div id="xbox" class="console">
+				
+			</div></a>
+		</div>
+		<div class="nofloat"></div>
+		
+		<div id="show_off">
+			<h1 id="CX">Xbox</h1>
+
+			<!--Action_Xbox-->
+
+			<div class="game_show">
+
+				<div id="btn1" class="btn" class="scroll" onclick="return btn_info_jeux_xbox_Action(Current_Action)"></div>
+
+				<div class="info_game">
+					<img id="slider1" class="presentation" src="img/xbone/xbone_act1.jpg">
+
+					<label id="Xbox_Action_Name"></label>
+					<label id="Xbox_Action_Price"></label>
+					
+				</div>
+				<div class="button_slider">
+					<input type="button" id="precXBONE1" value="<" onclick="return Xbox_Action_SliderBackward()">
+					<input type="button" id="suivXBONE1" value=">" onclick="return Xbox_Action_SliderForward()">
+					
+				</div>
+				<input type="button" id="buy_it" value="buy">
+			</div>
+
+			<!--FPS_Xbox-->
+
+			<div class="game_show">
+
+				<div id="btn2" class="btn" class="scroll" onclick="return btn_info_jeux_xbox_FPS(Current_FPS)"></div>
+
+				<div class="info_game">
+					<img id="slider2" class="presentation" src="img/xbone/xbone_fps1.jpg">
+
+					<label id="Xbox_FPS_Name"></label>
+					<label id="Xbox_FPS_Price"></label>
+				
+				</div>
+				<div class="button_slider">
+					<input type="button" id="precXBONE1" value="<" onclick="return Xbox_FPS_SliderBackward()">
+					<input type="button" id="suivXBONE1" value=">" onclick="return Xbox_FPS_SliderForward()">
+				</div>
+				<input type="button" id="buy_it" value="buy">
+			</div>
+
+			<!--Survival_Xbox-->
+
+			<div class="game_show">
+
+				<div id="btn3" class="btn" class="scroll" onclick="return btn_info_jeux_xbox_svh(Current_svh)"></div>
+
+				<div class="info_game">
+					<img id="slider3" class="presentation" src="img/xbone/xbone_svh1.jpg">
+
+					<label id="Xbox_svh_Name"></label>
+					<label id="Xbox_svh_Price"></label>
+				
+				</div>
+				<div class="button_slider">
+					<input type="button" id="precXBONE1" value="<" onclick="return Xbox_svh_SliderBackward()">
+					<input type="button" id="suivXBONE1" value=">" onclick="return Xbox_svh_SliderForward()">
+				</div>
+				<input type="button" id="buy_it" value="buy">
+			</div>
+
+			<div class="nofloat"></div>
+
+			
+		
+		<div id="show_off">
+
+			<h1 id="CP">PlayStation 4</h1>
+
+			<!--Action_PS4-->
+
+			<div class="game_show">
+
+				<div id="btn4" class="btn" class="scroll" onclick="return btn_info_jeux_ps4_act(Current_act)"></div>
+
+				<div class="info_game">
+					<img id="slider4" class="presentation" src="img/ps4/ps4_act1.jpg">
+
+					<label id="ps4_act_Name"></label>
+					<label id="ps4_act_Price"></label>
+				
+				</div>
+				<div class="button_slider">
+					<input type="button" id="precps4" value="<" onclick="return ps4_act_SliderBackward()">
+					<input type="button" id="suivps4" value=">" onclick="return ps4_act_SliderForward()">
+				</div>
+				<input type="button" id="buy_it" value="buy">
+			</div>
+
+			<!--Infiltration_PS4-->
+
+			<div class="game_show">
+
+				<div id="btn5" class="btn" class="scroll" onclick="return btn_info_jeux_ps4_inf(Current_inf)"></div>
+
+				<div class="info_game">
+					<img id="slider5" class="presentation" src="img/ps4/ps4_inf1.jpg">
+
+					<label id="ps4_inf_Name"></label>
+					<label id="ps4_inf_Price"></label>
+				
+				</div>
+				<div class="button_slider">
+					<input type="button" id="precps4" value="<" onclick="return ps4_inf_SliderBackward()">
+					<input type="button" id="suivps4" value=">" onclick="return ps4_inf_SliderForward()">
+				</div>
+				<input type="button" id="buy_it" value="buy">
+			</div>
+
+			<!--RPG_PS4-->
+
+			<div class="game_show">
+
+				<div id="btn6" class="btn" class="scroll" onclick="return btn_info_jeux_ps4_rpg(Current_rpg)"></div>
+
+				<div class="info_game">
+					<img id="slider6" class="presentation" src="img/ps4/ps4_rpg1.jpg">
+
+					<label id="ps4_rpg_Name">Overwatch</label>
+					<label id="ps4_rpg_Price">49,99</label>
+				
+				</div>
+				<div class="button_slider">
+					<input type="button" id="precps4" value="<" onclick="return ps4_rpg_SliderBackward()">
+					<input type="button" id="suivps4" value=">" onclick="return ps4_rpg_SliderForward()">
+				</div>
+				<input type="button" id="buy_it" value="buy">
+			</div>
+
+			<div class="nofloat"></div>
+
+
+			<div class="nofloat"></div>
+
+			<!--<div id="type1">
+				<table>
+					<tr>
+						<th>
+							By:
+						</th>
+
+						<td>
+							mommy
+						</td>
+
+					</tr>
+
+					<tr>
+						<th>
+							ESRB
+						</th>
+
+						<td>
+							18+
+						</td>
+					</tr>
+
+					<tr>
+						<th>
+							release
+						</th>
+
+						<td>
+							late
+						</td>
+					</tr>
+
+				</table>
+			</div>-->
+
+		</div>
+
+	</div>
+
+	<footer></footer>
+
+</div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+/*Formulaire*/
+var Nom;
+var Prenom;
+var Adresse;
+var Courriel;
+var Phone;
+var Postal;
+var Username;
+var Password;
+var TabformConnect = document.getElementsByName("inputFormConnect");
+var TabformInsc = document.getElementsByName("inputFormInsc");
+var Valide = true;
+var Current_Action=0;
+var Current_FPS=0;
+var Current_svh=0;
+var Current_act=0;
+var Current_inf=0;
+var Current_rpg=0;
+
+/*Tableaux*/
+var TabJeuxXbox_Action = new Array(3);
+TabJeuxXbox_Action[0]= new Jeux ("Action", "Rise of the Tomb Raider", "Square Enix", "M", 49.99, "xbone_act1");
+TabJeuxXbox_Action[1]= new Jeux ("Action", "Dark Souls III", "Bandai Namco Games", "M", 29.99, "xbone_act2");
+TabJeuxXbox_Action[2]= new Jeux ("Action", "Darksiders II: Deathinitive Edition", "M", "Nordic Games", 19.99, "xbone_act3");
+
+var TabJeuxXbox_FPS = new Array(3);
+TabJeuxXbox_FPS[0]= new Jeux ("FPS", "Overwatch", "Blizzard Entertainment", "T", 79.99, "xbone_fps1");
+TabJeuxXbox_FPS[1]= new Jeux ("FPS", "Titanfall 2", "EA Electronic Arts", "M", 39.99, "xbone_fps2");
+TabJeuxXbox_FPS[2]= new Jeux ("FPS", "Battlefield 1", "EA Electronic Arts", "M", 79.99, "xbone_fps3");
+
+var TabJeuxXbox_svh = new Array(3);
+TabJeuxXbox_svh[0]= new Jeux ("Survival Horror", "Resident Evill VII: Biohazard", "M", "Capcom", 79.99, "xbone_svh1");
+TabJeuxXbox_svh[1]= new Jeux ("Survival Horror", "The Evil Within", "Bethesda Softworks", "M", 29.99, "xbone_svh2");
+TabJeuxXbox_svh[2]= new Jeux ("Survival Horror", "Dying Light", "WB Games", "M", 29.99, "xbone_svh3");
+
+var TabJeuxps4_Action = new Array(3);
+TabJeuxps4_Action[0]= new Jeux ("Action", "Horizon: Zero Dawn", "Guerilla", "T", 79.99, "ps4_act1");
+TabJeuxps4_Action[1]= new Jeux ("Action", "The Last of Us", "Naughty Dog", "M", 39.99, "ps4_act2");
+TabJeuxps4_Action[2]= new Jeux ("Action", "Nier: Automata", "Square Enix", "M", 79.99, "ps4_act3");
+
+var TabJeuxps4_inf = new Array(3);
+TabJeuxps4_inf[0]= new Jeux ("Infiltration","Styx: Shards of Darkness", "Focus Home Interactive", "M", 59.99,"ps4_inf1");
+TabJeuxps4_inf[1]= new Jeux ("Infiltration","Metal Gear Solid V: The Phantom Pain", "Konami", "M", 29.99,"ps4_inf2");
+TabJeuxps4_inf[2]= new Jeux ("Infiltration","Dishonored 2", "Bethesda Softworks", "M", 79.99,"ps4_inf3");
+
+var TabJeuxps4_rpg = new Array(3);
+TabJeuxps4_rpg[0]= new Jeux ("RPG","Persona5", "Atlus", "M", 79.99, "ps4_rpg1");
+TabJeuxps4_rpg[1]= new Jeux ("RPG","The Witcher III: Wild Hunt ", "WB Games", "M", 29.99, "ps4_rpg2");
+TabJeuxps4_rpg[2]= new Jeux ("RPG","Mass Effect: Andromeda", "EA Electronic Arts", "M", 79.99, "ps4_rpg3");
+
+var TabCart = new Array ();
+
+function Jeux( Type, Nom, Editeur, Rating, Prix, Img )
+{
+	this.Type = Type;
+	this.Nom = Nom;
+	this.Editeur = Editeur;
+	this.Rating = Rating;
+	this.Prix = Prix;
+	this.Img = Img;
+}
+/*Javascript*/
+
+function init()
+{
+	getEl("Xbox_Action_Name").innerHTML= TabJeuxXbox_Action[Current_Action].Nom;
+	getEl("Xbox_Action_Price").innerHTML= TabJeuxXbox_Action[Current_Action].Prix;
+	getEl("Xbox_FPS_Name").innerHTML= TabJeuxXbox_FPS[Current_FPS].Nom;
+	getEl("Xbox_FPS_Price").innerHTML= TabJeuxXbox_FPS[Current_FPS].Prix;
+	getEl("Xbox_svh_Name").innerHTML= TabJeuxXbox_svh[Current_svh].Nom;
+	getEl("Xbox_svh_Price").innerHTML= TabJeuxXbox_svh[Current_svh].Prix;
+	getEl("ps4_act_Name").innerHTML= TabJeuxps4_Action[Current_act].Nom;
+	getEl("ps4_act_Price").innerHTML= TabJeuxps4_Action[Current_act].Prix;
+	getEl("ps4_inf_Name").innerHTML= TabJeuxps4_inf[Current_inf].Nom;
+	getEl("ps4_inf_Price").innerHTML= TabJeuxps4_inf[Current_inf].Prix;
+	getEl("ps4_rpg_Name").innerHTML= TabJeuxps4_rpg[Current_rpg].Nom;
+	getEl("ps4_rpg_Price").innerHTML= TabJeuxps4_rpg[Current_rpg].Prix;
+}
+
+	/*Formulaire Connection*/
+
+	function FormConnect(){
+		Username = getEl("txtusername").value;
+		Password = getEl("txtpassword").value;
+		ValideConn =false;
+
+		VideConnect();
+		ValUsername();
+		ValPass();
+		ValidationConn();
+	}
+
+	function ValidationConn()
+	{
+		if (ValideConn==true)
+		{
+			getEl("lblResConn").innerHTML = "Le formulaire est valide";
+		}
+		else
+		{
+			getEl("lblResConn").innerHTML = "Le formulaire n'est pas valide";
+		}
+
+	}
+
+	function VideConnect()
+	{
+
+		for (var i = 0; i < TabformConnect.length; i++) 
+			{
+			if(TabformConnect[i].value == "")
+			{
+				TabformConnect[i].style.backgroundColor="red";
+				ValideConn = false;
+
+			}
+		}
+	}
+
+	function ValUsername()
+	{
+		if(!/^\w{8,}$/.test(Username))
+		{
+			getEl("txtusername").style.backgroundColor="red";
+			ValideConn = false;
+		}
+		else{
+		getEl("txtadresse").style.backgroundColor="white";
+	}
+	}
+
+	function ValPass()
+	{
+		if(!/^\w{8,}$/.test(Password))
+		{
+			getEl("txtpassword").style.backgroundColor="red";
+			ValideConn = false;
+		}
+		else{
+		getEl("txtadresse").style.backgroundColor="white";
+	}
+	}
+
+/*Formulaire Inscription*/
+
+function FormInscription(){
+	Prenom = getEl("txtprenom").value;
+	Nom = getEl("txtnom").value;
+	Phone = getEl("txttelephone").value;
+	Adresse = getEl("txtadresse").value;
+	Postal = getEl("txtpostal").value;
+	Courriel = getEl("txtcourriel").value;
+	Username = getEl("txtusername").value;
+	Password = getEl("txtpassword").value;
+	ValideInsc = false;
+
+	VideInsc();
+	ValPrenom();
+	ValNom();
+	ValPhone();
+	ValAdresse();
+	ValPostal();
+	ValCourriel();
+	ValUsername();
+	ValPass();
+	ValidationIns();
+
+}
+
+	function ValidationIns()
+	{
+		if (ValideInsc==true)
+		{
+			getEl("lblResIns").innerHTML = "Le formulaire est valide";
+		}
+		else
+		{
+			getEl("lblResIns").innerHTML = "Le formulaire n'est pas valide";
+		}
+
+	}
+
+
+	function VideInsc()
+	{
+
+		for (var i = 0; i < TabformInsc.length; i++) 
+			{
+			if(TabformInsc[i].value == "")
+			{
+				TabformInsc[i].style.backgroundColor="red";
+				ValideInsc = false;
+
+			}
+		}
+	}
+
+	function ValNom()
+{
+	if(!/^[A-Za-z]+\-*[A-Za-z]+$/.test(Nom))//ex: 'Tremblay' OU 'St-Louis'
+	{
+		getEl("txtnom").style.backgroundColor="red";
+		ValideInsc = false;	
+	}
+	else{
+		getEl("txtadresse").style.backgroundColor="white";
+	}
+}
+
+function ValPrenom()
+{
+	if(!/^[A-Za-z]+( |\-)*[A-Za-z]+$/.test(Prenom))//ex: 'Pierre' OU 'Pierre-Paul' OU 'Pierre Paul'
+	{
+		getEl("txtprenom").style.backgroundColor="red";
+		ValideInsc = false;
+	}
+	else{
+		getEl("txtadresse").style.backgroundColor="white";
+	}
+}
+
+function ValAdresse()
+{
+	if(!/^\d{1,6} [-A-Za-z]+$/.test(Adresse))//ex: '123 Lilas'
+	{
+		getEl("txtadresse").style.backgroundColor="red";
+		ValideInsc = false;
+	}
+	else{
+		getEl("txtadresse").style.backgroundColor="white";
+	}
+}
+
+function ValCourriel()
+{
+	if(!/^\w+@[a-z]+.[a-z]+$/.test(Courriel))//ex: '123abc@abc.abc'
+	{
+		getEl("txtcourriel").style.backgroundColor="red";
+		ValideInsc = false;
+	}
+	else{
+		getEl("txtadresse").style.backgroundColor="white";
+	}
+}
+
+function ValPhone()
+{
+	if(!/^(\d{3}|\(\d{3}\))( |\-)\d{3}( |\-)\d{4}$/.test(Phone))//ex: '(418) 123 4567' OU '418-123-4567' OU '(418)-123-4567'
+	{
+		getEl("txttelephone").style.backgroundColor="red";
+		ValideInsc = false;
+	}
+	else{
+		getEl("txtadresse").style.backgroundColor="white";
+	}
+}
+
+function ValPostal()
+{
+	if(!/^[A-Za-z]\d[A-Z] +\d[A-Za-z]\d$/.test(Postal))//ex: 'g1q 1q9' OU 'G1Q 1Q9'
+	{
+		getEl("txtpostal").style.backgroundColor="red";
+		ValideInsc = false;
+	}
+	else{
+		getEl("txtadresse").style.backgroundColor="white";
+	}
+}
+
+/*Action*/
+
+function Xbox_Action_SliderForward()
+{
+	
+	Current_Action++;
+
+	if(Current_Action>2)
+	{
+		Current_Action=0;
+	}
+
+	getEl("slider1").src= "img/xbone/"+TabJeuxXbox_Action[Current_Action].Img+".jpg";
+	getEl("Xbox_Action_Name").innerHTML= TabJeuxXbox_Action[Current_Action].Nom;
+	getEl("Xbox_Action_Price").innerHTML= TabJeuxXbox_Action[Current_Action].Prix;
+
+	
+
+	console.log(Current_Action);
+
+}
+
+function Xbox_Action_SliderBackward()
+{
+	
+	Current_Action--;
+
+	if(Current_Action<0)
+	{
+		Current_Action=2;
+	}
+
+	getEl("slider1").src= "img/xbone/"+TabJeuxXbox_Action[Current_Action].Img+".jpg";
+	getEl("Xbox_Action_Name").innerHTML= TabJeuxXbox_Action[Current_Action].Nom;
+	getEl("Xbox_Action_Price").innerHTML= TabJeuxXbox_Action[Current_Action].Prix;
+
+	
+
+}
+
+/*FPS*/
+
+function Xbox_FPS_SliderForward()
+{
+	
+	Current_FPS++;
+
+	if(Current_FPS>2)
+	{
+		Current_FPS=0;
+	}
+
+	getEl("slider2").src= "img/xbone/"+TabJeuxXbox_FPS[Current_FPS].Img+".jpg";
+	getEl("Xbox_FPS_Name").innerHTML= TabJeuxXbox_FPS[Current_FPS].Nom;
+	getEl("Xbox_FPS_Price").innerHTML= TabJeuxXbox_FPS[Current_FPS].Prix;
+
+}
+
+function Xbox_FPS_SliderBackward()
+{
+	
+	Current_FPS--;
+
+	if(Current_FPS<0)
+	{
+		Current_FPS=2;
+	}
+
+	getEl("slider2").src= "img/xbone/"+TabJeuxXbox_FPS[Current_FPS].Img+".jpg";
+	getEl("Xbox_FPS_Name").innerHTML= TabJeuxXbox_FPS[Current_FPS].Nom;
+	getEl("Xbox_FPS_Price").innerHTML= TabJeuxXbox_FPS[Current_FPS].Prix;
+
+}
+
+/*Survival*/
+
+function Xbox_svh_SliderForward()
+{
+	
+	Current_svh++;
+
+	if(Current_svh>2)
+	{
+		Current_svh=0;
+	}
+
+	getEl("slider3").src= "img/xbone/"+TabJeuxXbox_svh[Current_svh].Img+".jpg";
+	getEl("Xbox_svh_Name").innerHTML= TabJeuxXbox_svh[Current_svh].Nom;
+	getEl("Xbox_svh_Price").innerHTML= TabJeuxXbox_svh[Current_svh].Prix;
+
+}
+
+function Xbox_svh_SliderBackward()
+{
+	
+	Current_svh--;
+
+	if(Current_svh<0)
+	{
+		Current_svh=2;
+	}
+
+	getEl("slider3").src= "img/xbone/"+TabJeuxXbox_svh[Current_svh].Img+".jpg";
+	getEl("Xbox_svh_Name").innerHTML= TabJeuxXbox_svh[Current_svh].Nom;
+	getEl("Xbox_svh_Price").innerHTML= TabJeuxXbox_svh[Current_svh].Prix;
+
+}
+
+/*Action_PS4*/
+
+function ps4_act_SliderForward()
+{
+	
+	Current_act++;
+
+	if(Current_act>2)
+	{
+		Current_act=0;
+	}
+
+	getEl("slider4").src= "img/ps4/"+TabJeuxps4_Action[Current_act].Img+".jpg";
+	getEl("ps4_act_Name").innerHTML= TabJeuxps4_Action[Current_act].Nom;
+	getEl("ps4_act_Price").innerHTML= TabJeuxps4_Action[Current_act].Prix;
+
+}
+
+function ps4_act_SliderBackward()
+{
+	
+	Current_act--;
+
+	if(Current_act<0)
+	{
+		Current_act=2;
+	}
+
+	getEl("slider4").src= "img/ps4/"+TabJeuxps4_Action[Current_act].Img+".jpg";
+	getEl("ps4_act_Name").innerHTML= TabJeuxps4_Action[Current_act].Nom;
+	getEl("ps4_act_Price").innerHTML= TabJeuxps4_Action[Current_act].Prix;
+
+}
+
+/*inf*/
+
+function ps4_inf_SliderForward()
+{
+	
+	Current_inf++;
+
+	if(Current_inf>2)
+	{
+		Current_inf=0;
+	}
+
+	getEl("slider5").src= "img/ps4/"+TabJeuxps4_inf[Current_inf].Img+".jpg";
+	getEl("ps4_inf_Name").innerHTML= TabJeuxps4_inf[Current_inf].Nom;
+	getEl("ps4_inf_Price").innerHTML= TabJeuxps4_inf[Current_inf].Prix;
+
+}
+
+function ps4_inf_SliderBackward()
+{
+	
+	Current_inf--;
+
+	if(Current_inf<0)
+	{
+		Current_inf=2;
+	}
+
+	getEl("slider5").src= "img/ps4/"+TabJeuxps4_inf[Current_inf].Img+".jpg";
+	getEl("ps4_inf_Name").innerHTML= TabJeuxps4_inf[Current_inf].Nom;
+	getEl("ps4_inf_Price").innerHTML= TabJeuxps4_inf[Current_inf].Prix;
+
+}
+
+/*rpg*/
+
+function ps4_rpg_SliderForward()
+{
+	
+	Current_rpg++;
+
+	if(Current_rpg>2)
+	{
+		Current_rpg=0;
+	}
+
+	getEl("slider6").src= "img/ps4/"+TabJeuxps4_rpg[Current_rpg].Img+".jpg";
+	getEl("ps4_rpg_Name").innerHTML= TabJeuxps4_rpg[Current_rpg].Nom;
+	getEl("ps4_rpg_Price").innerHTML= TabJeuxps4_rpg[Current_rpg].Prix;
+
+}
+
+function ps4_rpg_SliderBackward()
+{
+	
+	Current_rpg--;
+
+	if(Current_rpg<0)
+	{
+		Current_rpg=2;
+	}
+
+	getEl("slider6").src= "img/ps4/"+TabJeuxps4_rpg[Current_rpg].Img+".jpg";
+	getEl("ps4_rpg_Name").innerHTML= TabJeuxps4_rpg[Current_rpg].Nom;
+	getEl("ps4_rpg_Price").innerHTML= TabJeuxps4_rpg[Current_rpg].Prix;
+
+}
+
+function btn_info_jeux_xbox_Action(nb)
+{
+
+	getEl("type").innerHTML = TabJeuxXbox_Action[nb].Type;
+	getEl("nom").innerHTML = TabJeuxXbox_Action[nb].Nom;
+	getEl("editeur").innerHTML = TabJeuxXbox_Action[nb].Editeur;
+	getEl("rating").innerHTML = TabJeuxXbox_Action[nb].Rating;
+	getEl("prix").innerHTML = TabJeuxXbox_Action[nb].Prix;
+	getEl("img_cover").src ="img/xbone/"+TabJeuxXbox_Action[nb].Img+".jpg";
+
+}
+
+function btn_info_jeux_xbox_FPS(nb)
+{
+
+	getEl("type").innerHTML = TabJeuxXbox_FPS[nb].Type;
+	getEl("nom").innerHTML = TabJeuxXbox_FPS[nb].Nom;
+	getEl("editeur").innerHTML = TabJeuxXbox_FPS[nb].Editeur;
+	getEl("rating").innerHTML = TabJeuxXbox_FPS[nb].Rating;
+	getEl("prix").innerHTML = TabJeuxXbox_FPS[nb].Prix;
+	getEl("img_cover").src ="img/xbone/"+TabJeuxXbox_FPS[nb].Img+".jpg";
+
+}
+
+function btn_info_jeux_xbox_svh(nb)
+{
+
+	getEl("type").innerHTML = TabJeuxXbox_svh[nb].Type;
+	getEl("nom").innerHTML = TabJeuxXbox_svh[nb].Nom;
+	getEl("editeur").innerHTML = TabJeuxXbox_svh[nb].Editeur;
+	getEl("rating").innerHTML = TabJeuxXbox_svh[nb].Rating;
+	getEl("prix").innerHTML = TabJeuxXbox_svh[nb].Prix;
+	getEl("img_cover").src ="img/xbone/"+TabJeuxXbox_svh[nb].Img+".jpg";
+
+}
+
+function btn_info_jeux_ps4_act(nb)
+{
+
+	getEl("type").innerHTML = TabJeuxps4_Action[nb].Type;
+	getEl("nom").innerHTML = TabJeuxps4_Action[nb].Nom;
+	getEl("editeur").innerHTML = TabJeuxps4_Action[nb].Editeur;
+	getEl("rating").innerHTML = TabJeuxps4_Action[nb].Rating;
+	getEl("prix").innerHTML = TabJeuxps4_Action[nb].Prix;
+	getEl("img_cover").src ="img/ps4/"+TabJeuxps4_Action[nb].Img+".jpg";
+
+}
+
+function btn_info_jeux_ps4_inf(nb)
+{
+
+	getEl("type").innerHTML = TabJeuxps4_inf[nb].Type;
+	getEl("nom").innerHTML = TabJeuxps4_inf[nb].Nom;
+	getEl("editeur").innerHTML = TabJeuxps4_inf[nb].Editeur;
+	getEl("rating").innerHTML = TabJeuxps4_inf[nb].Rating;
+	getEl("prix").innerHTML = TabJeuxps4_inf[nb].Prix;
+	getEl("img_cover").src ="img/ps4/"+TabJeuxps4_inf[nb].Img+".jpg";
+
+}
+
+function btn_info_jeux_ps4_rpg(nb)
+{
+
+	getEl("type").innerHTML = TabJeuxps4_rpg[nb].Type;
+	getEl("nom").innerHTML = TabJeuxps4_rpg[nb].Nom;
+	getEl("editeur").innerHTML = TabJeuxps4_rpg[nb].Editeur;
+	getEl("rating").innerHTML = TabJeuxps4_rpg[nb].Rating;
+	getEl("prix").innerHTML = TabJeuxps4_rpg[nb].Prix;
+	getEl("img_cover").src ="img/ps4/"+TabJeuxps4_rpg[nb].Img+".jpg";
+
+}
+
+function getEl(El)
+{
+	return document.getElementById(El);
+}
+
+
+/*JQuery*/
+	$(function() {
+	$('div#ghost_fond').css("display","none");
+	$('div#ghost').css("display","none");
+	$('div#ghost_exit').css("display","none");
+	$('div#connection').css("display","none");
+	$('div#inscription').css("display","none");
+	$('div#cart_window').css("display","none");
+	$('div#cart.checkout').css("display","none");
+
+
+});
+
+$(function() {
+  $('#btn1').click(function() {
+  	$('#ghost_fond').fadeIn("slow");
+  	$('#ghost').fadeIn("slow");
+
+  	$('#ghost_exit').fadeIn("slow");
+
+  });
+});
+
+$(function() {
+  $('#btn2').click(function() {
+  	$('#ghost_fond').fadeIn("slow");
+  	$('#ghost').fadeIn("slow");
+
+  	$('#ghost_exit').fadeIn("slow");
+
+  });
+});
+
+$(function() {
+  $('#btn3').click(function() {
+  	$('#ghost_fond').fadeIn("slow");
+  	$('#ghost').fadeIn("slow");
+
+  	$('#ghost_exit').fadeIn("slow");
+
+  });
+});
+
+$(function() {
+  $('#btn4').click(function() {
+  	$('#ghost_fond').fadeIn("slow");
+  	$('#ghost').fadeIn("slow");
+
+  	$('#ghost_exit').fadeIn("slow");
+
+  });
+});
+
+$(function() {
+  $('#btn5').click(function() {
+  	$('#ghost_fond').fadeIn("slow");
+  	$('#ghost').fadeIn("slow");
+
+  	$('#ghost_exit').fadeIn("slow");
+
+  });
+});
+
+$(function() {
+  $('#btn6').click(function() {
+  	$('#ghost_fond').fadeIn("slow");
+  	$('#ghost').fadeIn("slow");
+
+  	$('#ghost_exit').fadeIn("slow");
+
+  });
+});
+
+$(function() {
+  $('#btn_connect').click(function() {
+  	$('#ghost_fond').fadeIn("slow");
+  	$('#connection').fadeIn("slow");
+  	$('#ghost_exit').fadeIn("slow");
+
+  });
+});
+
+$(function() {
+  $('#achat').click(function() {
+  	$('#ghost_fond').fadeIn("slow");
+  	$('#cart_window').fadeIn("slow");
+  	$('#ghost_exit').fadeIn("slow");
+
+  });
+});
+
+$(function() {
+  $('#create_account').click(function() {
+  	$('#connection').fadeOut("slow");
+  	$('#inscription').fadeIn("slow");
+
+  });
+});
+
+$(function() {
+  $('.scroll').click(function() {
+  	$('html, body').css({
+    overflow: 'hidden',
+    height: '100%'
+	});
+  });
+});
+
+$(function() {
+  $('#ghost_exit').click(function() {
+  	$('#ghost_fond').fadeOut("slow");
+  	$('#ghost').fadeOut("slow");
+  	$('#connection').fadeOut("slow");
+  	$('#inscription').fadeOut("slow");
+  	$('#ghost_exit').fadeOut("slow");
+  	$('#cart_window').fadeOut("slow");
+	$('html, body').css({
+	    overflow: 'auto',
+	    height: 'auto'
+	});
+  });
+});
+</script>
+<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</html>
