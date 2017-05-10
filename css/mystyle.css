@@ -7,7 +7,7 @@
 	position: relative;
 	position: fixed;
 	background-color: rgba(0,0,0,0.8);
-	z-index: 1000;
+	z-index: 1;
 	text-align: center;
 }
 
@@ -22,8 +22,8 @@
 	background-color: white;
 	margin: auto;
 	width: 400px;
-	/*height: 800px;*/
-	z-index: 1000
+	height: 800px;
+	z-index: 1
 }
 
 	.info_section{
@@ -56,8 +56,8 @@
 	background-color: white;
 	margin: auto;
 	width: 600px;
-	/*height: 800px;*/
-	z-index: 1000;
+	height: 800px;
+	z-index: 1;
 	padding: 15px;
 	box-sizing: border-box;
 	background-image: url("../img/bg_form.jpg");
@@ -70,25 +70,26 @@
 	overflow: auto;
 	position: fixed;
 	background-image: url("../img/btn_close.png");
-	z-index: 1000;
+	z-index: 1;
 	right: 10px;
-	top: 10px;
+	top: 55px;
 	transition: all .3s;
 }
 #ghost_exit:hover{
 	background-image: url("../img/btn_closeH.png");
 }
+
 #create_account{
-	width: 124px;
+	width: 134px;
 	height: 50px;
 	background-image: url("../img/btn_insc.png");
+	transition: all .3s;
 }
 #create_account:hover{
-	width: 124px;
-	height: 50px;
 	background-image: url("../img/btn_insc_H.png");
 }
-#cart_window{
+
+#inscription{
 	
 }
 
@@ -117,10 +118,11 @@ body{
 	background-color: black;
 	position: fixed;
 	width: 100%;
-	z-index: 100;
+	z-index: 1000;
 }
 
 header{
+	padding-top: 45px;
 	position: relative;
 	height: 200px;
 	width: 100%;
@@ -386,44 +388,44 @@ h2{
 
 /*--TABLEAUX--*/
 table{
-	height: 100%;
 	margin: auto;
 	width: 500px;
 }
-
-#Cart_list{
-	text-align: left;
-	height: auto;
-	background-color: #333;
-	border-collapse: collapse;
+#conxForm table {
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
-
-#Cart_list caption{
-	font-weight: bold;
-	text-align: left;
-	background-color: black;
-	color: white;
-	padding-left: 10px; 
-	padding-right: 10px; 
-	font-size: 4em;
+#conxForm table caption {
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+	text-shadow: 3px 3px 5px white;
+	margin-bottom: 20px;
 }
-
-#Cart_list tr{
-	height: 40px;
-	background-color: #888;
-	border-bottom: solid 1px black; 
-}
-
-#Cart_list #head_cart{
-	border-bottom: solid 0.5px black;
-}
-
-#Cart_list #head_cart th{
-	color: white;
-	background-color: #333;
-}
-
 /*--INPUTS--*/
+button{
+	cursor: pointer;
+	margin: auto;
+}
+.btn_insc{
+	border: none;
+	width: 134px;
+	height: 50px;
+	background-image: url("../img/btn_insc.png");
+	transition: all .3s;
+}
+.btn_insc:hover{
+	background-image: url("../img/btn_insc_H.png");
+}
+.btn_conn{
+	border: none;
+	height: 50px;
+	width: 134px;
+	background-image: url("../img/btn_conn.png");
+	transition: all .3s;
+}
+.btn_conn:hover{
+	background-image: url("../img/btn_conn_H.png");
+}
 #buy_it
 {
 	height: 50px;
