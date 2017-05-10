@@ -117,12 +117,12 @@
 					
 				</table>
 				
-
+				<div id="checkout"></div>
 				
 
 			</div>
 			
-			<!--<div id="achat">
+			<div id="checkout_menu">
 				<form id="achtForm" id="achtForm" method="post" action="#">
 					<table>
 						<caption>La caisse</caption>
@@ -140,7 +140,7 @@
 					</table>
 					
 				</form>
-			</div>-->
+			</div>
 
 		<div id="ghost_exit"></div>
 
@@ -1039,7 +1039,9 @@ function getEl(El)
 	$('div#connection').css("display","none");
 	$('div#inscription').css("display","none");
 	$('div#cart_window').css("display","none");
+	$('div#checkout').css("display","none");
 	$('div#cart.checkout').css("display","none");
+	$('div#checkout_menu').css("display","none");
 
 
 });
@@ -1118,6 +1120,16 @@ $(function() {
   	$('#ghost_fond').fadeIn("slow");
   	$('#cart_window').fadeIn("slow");
   	$('#ghost_exit').fadeIn("slow");
+  	$('#checkout').fadeIn("slow");
+
+  });
+});
+
+$(function() {
+  $('#checkout').click(function() {
+  	$('#cart_window').fadeOut("slow");
+  	$('#checkout_menu').fadeIn("slow");
+
 
   });
 });
@@ -1147,6 +1159,8 @@ $(function() {
   	$('#connection').fadeOut("slow");
   	$('#inscription').fadeOut("slow");
   	$('#ghost_exit').fadeOut("slow");
+  	$('#checkout').fadeOut("slow");
+  	$('#checkout_menu').fadeOut("slow");
   	$('#cart_window').fadeOut("slow");
 	$('html, body').css({
 	    overflow: 'auto',

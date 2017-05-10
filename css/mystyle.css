@@ -89,12 +89,11 @@
 	background-image: url("../img/btn_insc_H.png");
 }
 
-#inscription{
-	
-}
-
-#connection{
-
+#checkout_menu{
+	z-index: 1001;
+	position: absolute;
+	background-color: white;
+	margin: auto;
 }
 
 /*--Global--*/
@@ -491,5 +490,11 @@ button{
 }
 .btnSuiv:hover{
 	background-image: url("../img/btn_suiv_H.png");
+}
+
+#checkout{
+	height: 80px;
+	width: 80px;
+	background-color: red;
 }
 
