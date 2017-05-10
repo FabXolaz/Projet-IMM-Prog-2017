@@ -125,7 +125,7 @@
 	<div id="nav_ut">
 		
 		<div><span id="btn_connect" class="scroll">Connexion</span></div>
-		<a href="cart.html"><div id="achat"><label id="num_achat">0</label><img id="icon_cart" src="img/icon_cart_w.png"></div></a>
+		<div id="achat"><label id="num_achat">0</label><img id="icon_cart" src="img/icon_cart_w.png"></div>
 
 	</div>
 
@@ -169,7 +169,7 @@
 				
 				<div class="button_slider">
 					<input type="button" class="btnPrec" id="precXBONE1" onclick="return Xbox_Action_SliderBackward()">
-					<input type="button" id="buy_it">
+					<input type="button" id="buy_it" onclick="return btn_cart_ajout()">
 					<input type="button" class="btnSuiv" id="suivXBONE1" onclick="return Xbox_Action_SliderForward()">
 				</div>
 			</div>
@@ -597,7 +597,7 @@ function ValPhone()
 		getEl("txtadresse").style.backgroundColor="white";
 	}
 }
-
+/*-----------------------------------PROBLEM YO-----------------------------*/
 function ValPostal()
 {
 	if(!/^[A-Za-z]\d[A-Z] +\d[A-Za-z]\d$/.test(Postal))//ex: 'g1q 1q9' OU 'G1Q 1Q9'
@@ -891,6 +891,51 @@ function btn_info_jeux_ps4_rpg(nb)
 	getEl("img_cover").src ="img/ps4/"+TabJeuxps4_rpg[nb].Img+".jpg";
 
 }
+
+/*// Tout dépendament de l'enplacement où la fonction va être appelée, cette dernière va envoyer des paramètres pour indiquer comment la traiter (ex: "console = XBOX", "type = action" et le cpt)
+function btn_cart_ajout(console, type, cpt)
+{
+
+	var () // Objet qui contients 
+
+	if (console == 1) // XBOX
+	{
+		switch (type)
+		{
+			case 1: // Action
+			{
+
+			} break;
+			case 2: // FPS
+			{
+
+			} break;
+			case 3: // Horreur
+			{
+
+			} break;
+		}
+	}
+	else // PS4
+	{
+		switch (type)
+		{
+			case 1: // Action
+			{
+				
+			} break;
+			case 2: // Infiltration
+			{
+				
+			} break;
+			case 3: // RPG
+			{
+				
+			} break;
+		}
+	}
+
+}*/
 
 function getEl(El)
 {

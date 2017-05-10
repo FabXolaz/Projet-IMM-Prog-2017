@@ -115,6 +115,9 @@ body{
 #nav_ut{
 	height: 45px;
 	background-color: black;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
 }
 
 header{
