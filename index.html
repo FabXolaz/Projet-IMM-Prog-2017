@@ -25,11 +25,12 @@
 						<tr><th>Prix: </th><th><label id="prix"></label></th></tr>
 					</table>
 				</div>
-				
 			</div>
 
 		<div class="over_menu" id="connection">
-
+			<div class="title3">
+				<h2>Connexion</h2>
+			</div>
 			<form id="conxForm" id="conxForm" method="post" action="#">
 				<table>
 					<caption>Connexion au compte</caption>
@@ -48,6 +49,9 @@
 		</div>
 						
 			<div class="over_menu" id="inscription">
+				<div class="title3">
+					<h2>Inscription</h2>
+				</div>
 				<form id="inscForm" id="inscForm" method="post" action="#">
 					<table>
 						<caption>Informations personnelles</caption>
@@ -121,20 +125,20 @@
 	<div id="nav_ut">
 		
 		<div><span id="btn_connect" class="scroll">Connexion</span></div>
-		<a href="cart.html"><div id="achat"><label id="num_achat">0</label><img id="icon_cart" src="img/icon_cart_w.png"></div></a>
+		<div id="achat"><label id="num_achat">0</label><img id="icon_cart" src="img/icon_cart_w.png"></div>
 
 	</div>
 
 	<header>
-	<div id="logo">
-	
-	</div>
+		<div id="logo">
+		</div>
+		<strong><p id="baseline">LES PRIX À BATTRE SONT ICI!</p></strong>
 	</header>
 	
 	<div id="container">
 		<div id="center">
 			<a href="#CP"><div id="ps4" class="console">
-				<img class="imgConsole"src="img/console_ps4.png">
+				<img class="imgConsole" src="img/console_ps4.png">
 			</div></a>
 
 			<a href="#CX"><div id="xbox" class="console">
@@ -145,7 +149,7 @@
 		
 		<div id="show_off">
 			<div class="title1" id="titleXbox">
-				<h1>Xbox One</h1>
+				<h1 id="CX">Xbox One</h1>
 			</div>
 			<!--Action_Xbox-->
 
@@ -165,7 +169,7 @@
 				
 				<div class="button_slider">
 					<input type="button" class="btnPrec" id="precXBONE1" onclick="return Xbox_Action_SliderBackward()">
-					<input type="button" id="buy_it">
+					<input type="button" id="buy_it" onclick="return btn_cart_ajout()">
 					<input type="button" class="btnSuiv" id="suivXBONE1" onclick="return Xbox_Action_SliderForward()">
 				</div>
 			</div>
@@ -218,7 +222,7 @@
 
 		<div id="show_off">
 			<div class="title1" id="titlePs4">
-				<h1>PlayStation 4</h1>
+				<h1 id="CP">PlayStation 4</h1>
 			</div>
 			<!--Action_PS4-->
 
@@ -593,7 +597,7 @@ function ValPhone()
 		getEl("txtadresse").style.backgroundColor="white";
 	}
 }
-
+/*-----------------------------------PROBLEM YO-----------------------------*/
 function ValPostal()
 {
 	if(!/^[A-Za-z]\d[A-Z] +\d[A-Za-z]\d$/.test(Postal))//ex: 'g1q 1q9' OU 'G1Q 1Q9'
@@ -887,6 +891,51 @@ function btn_info_jeux_ps4_rpg(nb)
 	getEl("img_cover").src ="img/ps4/"+TabJeuxps4_rpg[nb].Img+".jpg";
 
 }
+
+/*// Tout dépendament de l'enplacement où la fonction va être appelée, cette dernière va envoyer des paramètres pour indiquer comment la traiter (ex: "console = XBOX", "type = action" et le cpt)
+function btn_cart_ajout(console, type, cpt)
+{
+
+	var () // Objet qui contients 
+
+	if (console == 1) // XBOX
+	{
+		switch (type)
+		{
+			case 1: // Action
+			{
+
+			} break;
+			case 2: // FPS
+			{
+
+			} break;
+			case 3: // Horreur
+			{
+
+			} break;
+		}
+	}
+	else // PS4
+	{
+		switch (type)
+		{
+			case 1: // Action
+			{
+				
+			} break;
+			case 2: // Infiltration
+			{
+				
+			} break;
+			case 3: // RPG
+			{
+				
+			} break;
+		}
+	}
+
+}*/
 
 function getEl(El)
 {
