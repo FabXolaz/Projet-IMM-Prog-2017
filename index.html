@@ -96,7 +96,33 @@
 				</form><label id="lblResIns"></label>
 			</div>
 			
-			<!--<div id="achat">
+			<div id="cart_window" class="over_menu">
+				<table id="Cart_list">
+					<caption>Cart</caption>
+					<tr id="head_cart">
+						<th></th><th>Produit</th><th>Prix</th>
+					</tr>
+					<tr>
+						<th>Item #1</th><td>Name</td><td>price</td>
+					</tr>
+					<tr>
+						<th>Item #2</th><td>Name</td><td>price</td>
+					</tr>
+					<tr>
+						<th>Item #3</th><td>Name</td><td>price</td>
+					</tr>
+					<tr>
+						<th>Item #4</th><td>Name</td><td>price</td>
+					</tr>
+					
+				</table>
+				
+
+				
+
+			</div>
+
+			<!--<div id="cart.checkout">
 				<form id="achtForm" id="achtForm" method="post" action="#">
 					<table>
 						<caption>La caisse</caption>
@@ -1012,6 +1038,8 @@ function getEl(El)
 	$('div#ghost_exit').css("display","none");
 	$('div#connection').css("display","none")
 	$('div#inscription').css("display","none")
+	$('div#cart_window').css("display","none");
+	$('div#cart.checkout').css("display","none");
 
 
 });
@@ -1085,7 +1113,14 @@ $(function() {
   });
 });
 
+$(function() {
+  $('#achat').click(function() {
+  	$('#ghost_fond').fadeIn("slow");
+  	$('#cart_window').fadeIn("slow");
+  	$('#ghost_exit').fadeIn("slow");
 
+  });
+});
 
 $(function() {
   $('#create_account').click(function() {
@@ -1111,6 +1146,7 @@ $(function() {
   	$('#connection').fadeOut("slow");
   	$('#inscription').fadeOut("slow");
   	$('#ghost_exit').fadeOut("slow");
+  	$('#cart_window').fadeOut("slow");
 	$('html, body').css({
 	    overflow: 'auto',
 	    height: 'auto'
