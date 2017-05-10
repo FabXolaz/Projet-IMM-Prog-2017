@@ -31,7 +31,7 @@
 			<div class="title3">
 				<h2>Connexion</h2>
 			</div>
-			<form id="conxForm" id="conxForm" method="post" action="#">
+			<form id="conxForm" method="post" action="#">
 				<table>
 					<caption>Connexion au compte</caption>
 					<tr>
@@ -43,7 +43,7 @@
 						<td><input type="password" name="inputFormConnect" id="txtpassword"></td>
 					</tr>
 				</table>
-				<button type="button" onclick="FormConnect()">Tester formulaire</button>
+				<button type="button" class="btn_conn" onclick="FormConnect()"></button>
 				<div id="create_account"></div>
 			</form><label id="lblResConn"></label>
 		</div>
@@ -52,7 +52,7 @@
 				<div class="title3">
 					<h2>Inscription</h2>
 				</div>
-				<form id="inscForm" id="inscForm" method="post" action="#">
+				<form id="inscForm" method="post" action="#">
 					<table>
 						<caption>Informations personnelles</caption>
 						<tr>
@@ -92,7 +92,7 @@
 							<td><input type="password" name="inputFormInsc" id="txtpassword"></td>
 						</tr>
 					</table>
-					<button type="button" onclick="FormInscription()">Tester formulaire</button>
+					<button type="button" class="btn_insc" onclick="FormConnect()"></button>
 				</form><label id="lblResIns"></label>
 			</div>
 			
@@ -169,7 +169,7 @@
 				
 				<div class="button_slider">
 					<input type="button" class="btnPrec" id="precXBONE1" onclick="return Xbox_Action_SliderBackward()">
-					<input type="button" id="buy_it" onclick="return btn_cart_ajout()">
+					<input type="button" id="buy_it" onclick="return btn_cart_ajout(1, 1, Current_Action)">
 					<input type="button" class="btnSuiv" id="suivXBONE1" onclick="return Xbox_Action_SliderForward()">
 				</div>
 			</div>
@@ -191,7 +191,7 @@
 				
 				<div class="button_slider">
 					<input type="button" class="btnPrec" id="precXBONE1" onclick="return Xbox_FPS_SliderBackward()">
-					<input type="button" id="buy_it">
+					<input type="button" id="buy_it" onclick="return btn_cart_ajout(1, 2, Current_FPS)">
 					<input type="button" class="btnSuiv" id="suivXBONE1" onclick="return Xbox_FPS_SliderForward()">
 				</div>
 			</div>
@@ -213,7 +213,7 @@
 				
 				<div class="button_slider">
 					<input type="button" class="btnPrec" id="precXBONE1" onclick="return Xbox_svh_SliderBackward()">
-					<input type="button" id="buy_it">
+					<input type="button" id="buy_it" onclick="return btn_cart_ajout(1, 3, Current_svh)">
 					<input type="button" class="btnSuiv" id="suivXBONE1" onclick="return Xbox_svh_SliderForward()">
 				</div>
 			</div>
@@ -241,7 +241,7 @@
 				
 				<div class="button_slider">
 					<input type="button" class="btnPrec" id="precps4" onclick="return ps4_act_SliderBackward()">
-					<input type="button" id="buy_it">
+					<input type="button" id="buy_it" onclick="return btn_cart_ajout(2, 1, Current_act)">
 					<input type="button" class="btnSuiv" id="suivps4" onclick="return ps4_act_SliderForward()">
 				</div>
 			</div>
@@ -263,7 +263,7 @@
 				
 				<div class="button_slider">
 					<input type="button" class="btnPrec" id="precps4" onclick="return ps4_inf_SliderBackward()">
-					<input type="button" id="buy_it">
+					<input type="button" id="buy_it" onclick="return btn_cart_ajout(2, 2, Current_inf)">
 					<input type="button" class="btnSuiv" id="suivps4" onclick="return ps4_inf_SliderForward()">
 				</div>
 			</div>
@@ -285,7 +285,7 @@
 				
 				<div class="button_slider">
 					<input type="button" class="btnPrec" id="precps4" onclick="return ps4_rpg_SliderBackward()">
-					<input type="button" id="buy_it">
+					<input type="button" id="buy_it" onclick="return btn_cart_ajout(2, 3, Current_rpg)">
 					<input type="button" class="btnSuiv" id="suivps4" onclick="return ps4_rpg_SliderForward()">
 				</div>
 			</div>
@@ -293,42 +293,6 @@
 			<div class="nofloat"></div>
 
 			<div class="nofloat"></div>
-
-			<!--<div id="type1">
-				<table>
-					<tr>
-						<th>
-							By:
-						</th>
-
-						<td>
-							mommy
-						</td>
-
-					</tr>
-
-					<tr>
-						<th>
-							ESRB
-						</th>
-
-						<td>
-							18+
-						</td>
-					</tr>
-
-					<tr>
-						<th>
-							release
-						</th>
-
-						<td>
-							late
-						</td>
-					</tr>
-
-				</table>
-			</div>-->
 
 		</div>
 
@@ -393,6 +357,19 @@ TabJeuxps4_rpg[0]= new Jeux ("RPG","Persona5", "Atlus", "M", 79.99, "ps4_rpg1");
 TabJeuxps4_rpg[1]= new Jeux ("RPG","The Witcher III: Wild Hunt ", "WB Games", "M", 29.99, "ps4_rpg2");
 TabJeuxps4_rpg[2]= new Jeux ("RPG","Mass Effect: Andromeda", "EA Electronic Arts", "M", 79.99, "ps4_rpg3");
 
+/*Panier*/
+var TabPanier = new Array(1);
+TabPanier[0] = new ItemPanier (0,"",0,0);
+var CptPanier = 0;
+
+function ItemPanier (Code, Titre, Prix, Quantite)
+{
+	this.Code = Code;
+	this.Titre = Titre;
+	this.Prix = Prix;
+	this.Quantite = Quantite;
+}
+
 function Jeux( Type, Nom, Editeur, Rating, Prix, Img )
 {
 	this.Type = Type;
@@ -420,69 +397,69 @@ function init()
 	getEl("ps4_rpg_Price").innerHTML= TabJeuxps4_rpg[Current_rpg].Prix;
 }
 
-	/*Formulaire Connection*/
+/*Formulaire Connection*/
 
-	function FormConnect(){
-		Username = getEl("txtusername").value;
-		Password = getEl("txtpassword").value;
-		ValideConn =false;
+function FormConnect(){
+	Username = getEl("txtusername").value;
+	Password = getEl("txtpassword").value;
+	ValideConn =false;
 
-		VideConnect();
-		ValUsername();
-		ValPass();
-		ValidationConn();
+	VideConnect();
+	ValUsername();
+	ValPass();
+	ValidationConn();
+}
+
+function ValidationConn()
+{
+	if (ValideConn==true)
+	{
+		getEl("lblResConn").innerHTML = "Le formulaire est valide";
+	}
+	else
+	{
+		getEl("lblResConn").innerHTML = "Le formulaire n'est pas valide";
 	}
 
-	function ValidationConn()
-	{
-		if (ValideConn==true)
+}
+
+function VideConnect()
+{
+
+	for (var i = 0; i < TabformConnect.length; i++) 
 		{
-			getEl("lblResConn").innerHTML = "Le formulaire est valide";
-		}
-		else
+		if(TabformConnect[i].value == "")
 		{
-			getEl("lblResConn").innerHTML = "Le formulaire n'est pas valide";
-		}
-
-	}
-
-	function VideConnect()
-	{
-
-		for (var i = 0; i < TabformConnect.length; i++) 
-			{
-			if(TabformConnect[i].value == "")
-			{
-				TabformConnect[i].style.backgroundColor="red";
-				ValideConn = false;
-
-			}
-		}
-	}
-
-	function ValUsername()
-	{
-		if(!/^\w{8,}$/.test(Username))
-		{
-			getEl("txtusername").style.backgroundColor="red";
+			TabformConnect[i].style.backgroundColor="red";
 			ValideConn = false;
-		}
-		else{
-		getEl("txtadresse").style.backgroundColor="white";
-	}
-	}
 
-	function ValPass()
-	{
-		if(!/^\w{8,}$/.test(Password))
-		{
-			getEl("txtpassword").style.backgroundColor="red";
-			ValideConn = false;
 		}
-		else{
-		getEl("txtadresse").style.backgroundColor="white";
 	}
+}
+
+function ValUsername()
+{
+	if(!/^\w{8,}$/.test(Username))
+	{
+		getEl("txtusername").style.backgroundColor="red";
+		ValideConn = false;
 	}
+	else{
+	getEl("txtadresse").style.backgroundColor="white";
+	}
+}
+
+function ValPass()
+{
+	if(!/^\w{8,}$/.test(Password))
+	{
+		getEl("txtpassword").style.backgroundColor="red";
+		ValideConn = false;
+	}
+	else{
+	getEl("txtadresse").style.backgroundColor="white";
+	}
+}
 
 /*Formulaire Inscription*/
 
@@ -891,51 +868,136 @@ function btn_info_jeux_ps4_rpg(nb)
 	getEl("img_cover").src ="img/ps4/"+TabJeuxps4_rpg[nb].Img+".jpg";
 
 }
-
-/*// Tout dépendament de l'enplacement où la fonction va être appelée, cette dernière va envoyer des paramètres pour indiquer comment la traiter (ex: "console = XBOX", "type = action" et le cpt)
-function btn_cart_ajout(console, type, cpt)
+// Tout dépendament de l'enplacement où la fonction va être appelée, cette dernière va envoyer des paramètres pour indiquer comment la traiter (ex: "console = XBOX", "type = action" et le cpt)
+function btn_cart_ajout(Console, Type, Cpt)
 {
-
-	var () // Objet qui contients 
-
-	if (console == 1) // XBOX
+	var SiDejaPresent = false, PeutContinuer = false;
+	var Item = new ItemPanier(0,"",0,1); // Nouvel item à ajouter au panier.
+	console.log(TabPanier);
+	console.log(CptPanier);
+	if (Console == 1) // XBOX
 	{
-		switch (type)
+		switch (Type)
 		{
 			case 1: // Action
 			{
-
+				switch (Cpt)
+				{
+					case 0: Item.Code = 1; break; // Tomb Raider
+					case 1: Item.Code = 2; break; // Dark Souls III
+					case 2: Item.Code = 3; break; // Darksiders II
+				}
+				Item.Titre = TabJeuxXbox_Action[Cpt].Nom;
+				Item.Prix = TabJeuxXbox_Action[Cpt].Prix;
 			} break;
 			case 2: // FPS
 			{
-
+				switch (Cpt)
+				{
+					case 0: Item.Code = 4; break; // Overwatch
+					case 1: Item.Code = 5; break; // Titanfall 2
+					case 2: Item.Code = 6; break; // Battlefield 1
+				}
+				Item.Titre = TabJeuxXbox_FPS[Cpt].Nom;
+				Item.Prix = TabJeuxXbox_FPS[Cpt].Prix;
 			} break;
 			case 3: // Horreur
 			{
-
+				switch (Cpt)
+				{
+					case 0: Item.Code = 7; break; // Resident Evil VII
+					case 1: Item.Code = 8; break; // The Evil Within
+					case 2: Item.Code = 9; break; // Dying Light
+				}
+				Item.Titre = TabJeuxXbox_svh[Cpt].Nom;
+				Item.Prix = TabJeuxXbox_svh[Cpt].Prix;
 			} break;
 		}
 	}
 	else // PS4
 	{
-		switch (type)
+		switch (Type)
 		{
 			case 1: // Action
 			{
-				
+				switch (Cpt)
+				{
+					case 0: Item.Code = 10; break; // Horizon: Zero Dawn
+					case 1: Item.Code = 11; break; // The Last of Us
+					case 2: Item.Code = 12; break; // Nier: Automata
+				}
+				Item.Titre = TabJeuxps4_Action[Cpt].Nom;
+				Item.Prix = TabJeuxps4_Action[Cpt].Prix;;
 			} break;
 			case 2: // Infiltration
 			{
-				
+				switch (Cpt)
+				{
+					case 0: Item.Code = 13; break; // Styx: Shards of Darkness
+					case 1: Item.Code = 14; break; // Metal Gear Solid V: The Phantom Pain
+					case 2: Item.Code = 15; break; // Dishonored 2
+				}
+				Item.Titre = TabJeuxps4_inf[Cpt].Nom;
+				Item.Prix = TabJeuxps4_inf[Cpt].Prix;;
 			} break;
 			case 3: // RPG
 			{
-				
+				switch (Cpt)
+				{
+					case 0: Item.Code = 16; break; //Persona 5
+					case 1: Item.Code = 17; break; // The Witcher III
+					case 2: Item.Code = 18; break; // Mass Effect Andromeda
+				}
+				Item.Titre = TabJeuxps4_rpg[Cpt].Nom;
+				Item.Prix = TabJeuxps4_rpg[Cpt].Prix;;
 			} break;
 		}
 	}
-
-}*/
+	console.log("Item: ", Item.Code, Item.Titre, Item.Prix);
+	
+	// Vérifie s'il y a déjà le même item dans le panier et si c'est le cas, augmente sa quantité.
+	if (TabPanier[0].Code == 0)
+	{
+		TabPanier[0] = Item;
+	}
+	else
+	{
+		while (PeutContinuer == false)
+		{
+			console.log("compteur panier : ", CptPanier);
+			if (CptPanier < TabPanier.length)
+			{
+				if (Item.Code == TabPanier[CptPanier].Code)
+				{
+					SiDejaPresent = true;
+					PeutContinuer = true;
+				}
+				else
+				{
+					CptPanier ++;
+				}
+			}
+			else
+			{
+				PeutContinuer = true;
+			}
+		}
+		console.log("Si deja present: ", SiDejaPresent);
+		// Si l'item n'est pas déjà présent dans le panier, ce dernier est ajouter à la fin de ce dernier.
+		if (SiDejaPresent == false)
+		{
+			TabPanier.push(Item);
+			console.log("Test4a");
+		}
+		else
+		{
+			TabPanier[CptPanier].Quantite += 1;
+			console.log("Test4b");
+		}
+	}
+	CptPanier = 0;
+	console.log(TabPanier);
+}
 
 function getEl(El)
 {
