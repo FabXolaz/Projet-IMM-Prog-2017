@@ -7,7 +7,7 @@
 	position: relative;
 	position: fixed;
 	background-color: rgba(0,0,0,0.8);
-	z-index: 1;
+	z-index: 1000;
 	text-align: center;
 }
 
@@ -23,7 +23,7 @@
 	margin: auto;
 	width: 400px;
 	height: 800px;
-	z-index: 1
+	z-index: 1000;
 }
 
 	.info_section{
@@ -57,7 +57,7 @@
 	margin: auto;
 	width: 600px;
 	height: 800px;
-	z-index: 1;
+	z-index: 1000;
 	padding: 15px;
 	box-sizing: border-box;
 	background-image: url("../img/bg_form.jpg");
@@ -70,9 +70,9 @@
 	overflow: auto;
 	position: fixed;
 	background-image: url("../img/btn_close.png");
-	z-index: 1;
+	z-index: 1000;
 	right: 10px;
-	top: 55px;
+	top: 10px;
 	transition: all .3s;
 }
 #ghost_exit:hover{
@@ -118,7 +118,7 @@ body{
 	background-color: black;
 	position: fixed;
 	width: 100%;
-	z-index: 1000;
+	z-index: 100;
 }
 
 header{
@@ -401,6 +401,40 @@ table{
 	text-shadow: 3px 3px 5px white;
 	margin-bottom: 20px;
 }
+
+#Cart_list{
+	text-align: left;
+	height: auto;
+	background-color: #333;
+	border-collapse: collapse;
+}
+
+#Cart_list caption{
+	font-weight: bold;
+	text-align: left;
+	background-color: black;
+	color: white;
+	padding-left: 10px; 
+	padding-right: 10px; 
+	font-size: 4em;
+}
+
+#Cart_list tr{
+	height: 40px;
+	background-color: #888;
+	border-bottom: solid 1px black; 
+}
+
+#Cart_list #head_cart{
+	border-bottom: solid 0.5px black;
+}
+
+#Cart_list #head_cart th{
+	color: white;
+	background-color: #333;
+}
+
+
 /*--INPUTS--*/
 button{
 	cursor: pointer;
