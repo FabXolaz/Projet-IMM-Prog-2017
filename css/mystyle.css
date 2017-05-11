@@ -64,6 +64,10 @@
 	background-repeat: repeat-x;
 }
 
+#CaissePanier{
+	width: 830px;
+}
+
 #ghost_exit{
 	width: 40px;
 	height: 40px;
@@ -498,3 +502,76 @@ button{
 	background-color: red;
 }
 
+/*----------------------------experiment--------------------------------*/
+#CaissePanier table{
+		width: 800px;
+		margin: auto;
+		border: 2px solid black;
+	}
+	
+	.lblPanier{
+		font-family: 'Open Sans', sans-serif;
+		font-size: 2em;
+		text-align: right;
+	}
+	#Row0{
+		font-family: 'Oswald', sans-serif;
+		font-size: 3em;
+		color: white;
+		background-color: #BF2229;
+		text-align: center;
+	}
+	#Row1{
+		visibility: collapse;
+	}
+	#Row2{
+		visibility: collapse;
+	}
+	#Row3{
+		visibility: collapse;
+	}
+	#Row4{
+		visibility: collapse;
+	}
+	#Row5{
+		visibility: collapse;
+	}
+	#Row6{
+		visibility: collapse;
+	}
+	#Row7{
+		visibility: collapse;
+	}
+	#Row8{
+		visibility: collapse;
+	}
+	#Row9{
+		visibility: collapse;
+	}
+	#Row10{
+		visibility: collapse;
+	}
+	#Row11{
+		visibility: collapse;
+	}
+	#Row12{
+		visibility: collapse;
+	}
+	#Row13{
+		visibility: collapse;
+	}
+	#Row14{
+		visibility: collapse;
+	}
+	#Row15{
+		visibility: collapse;
+	}
+	#Row16{
+		visibility: collapse;
+	}
+	#Row17{
+		visibility: collapse;
+	}
+	#Row18{
+		visibility: collapse;
+	}
