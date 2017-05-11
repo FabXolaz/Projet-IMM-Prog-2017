@@ -92,7 +92,7 @@
 							<td><input type="password" name="inputFormInsc" id="txtpassword"></td>
 						</tr>
 					</table>
-					<button type="button" class="btn_insc" onclick="FormConnect()"></button>
+					<button type="button" class="btn_insc" onclick="FormInscription()"></button>
 				</form><label id="lblResIns"></label>
 			</div>
 			
@@ -662,11 +662,11 @@ function ValidationConn()
 {
 	if (ValideConn==true)
 	{
-		getEl("lblResConn").innerHTML = "Le formulaire est valide";
+		getEl("lblResConn").innerHTML = "Vous êtes maintenant connecté";
 	}
 	else
 	{
-		getEl("lblResConn").innerHTML = "Le formulaire n'est pas valide";
+		getEl("lblResConn").innerHTML = "Mot de Passe et/ou Nom d'utilisateur incorrect";
 	}
 
 }
@@ -739,11 +739,11 @@ function FormInscription(){
 	{
 		if (ValideInsc==true)
 		{
-			getEl("lblResIns").innerHTML = "Le formulaire est valide";
+			getEl("lblResIns").innerHTML = "information complète veuillez aller vérifier vos message";
 		}
 		else
 		{
-			getEl("lblResIns").innerHTML = "Le formulaire n'est pas valide";
+			getEl("lblResIns").innerHTML = "Information incomplète veuiller verifier les champs en rouge";
 		}
 
 	}
